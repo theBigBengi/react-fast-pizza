@@ -7,7 +7,9 @@ export default function SearchOrder() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
     if (!query) return;
+
     navigate(`/order/${query}`);
     setQuery("");
   }
@@ -18,6 +20,7 @@ export default function SearchOrder() {
         placeholder='search order #'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        className='input w-28 h-10 focus:ring-opacity-50 sm:w-64 sm:focus:w-72'
       />
     </form>
   );
