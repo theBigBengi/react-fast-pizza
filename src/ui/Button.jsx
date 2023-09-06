@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Button({ children, disabled, to, type }) {
+export default function Button({ children, disabled, to, type, onClick }) {
   const base = `bg-violet-400 uppercase 
   font-semibold text-slate-800 text-sm 
   inline-block rounded-full tracking-wide 
@@ -14,6 +14,7 @@ export default function Button({ children, disabled, to, type }) {
   const styles = {
     primary: base + ` py-1.5 px-4 md:px-6 md:py-2.5`,
     small: base + ` text-xs px-4 py-2 md:px-5 md:py-2.5`,
+    round: base + ` px-2.5 py-1 md:px-3.5 md:py-2 text-sm`,
     secondary: ` uppercase 
     font-semibold text-slate-500 text-sm 
     inline-block rounded-full tracking-wide 
@@ -29,6 +30,13 @@ export default function Button({ children, disabled, to, type }) {
       <Link to={to} className={styles[type]}>
         {children}
       </Link>
+    );
+
+  if (onClick)
+    return (
+      <button disabled={disabled} className={styles[type]} onClick={onClick}>
+        {children}
+      </button>
     );
 
   return (
