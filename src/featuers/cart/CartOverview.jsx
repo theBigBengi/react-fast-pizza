@@ -10,7 +10,10 @@ function CartOverview() {
   if (!totalQuantity) return null;
 
   return (
-    <div className='flex items-center justify-between px-4 py-4 bg-slate-800 text-slate-200 text-sm uppercase sm:px-6 md:text-base'>
+    <div
+      className='flex items-center justify-between px-4 py-10
+     bg-slate-800 text-slate-200 text-sm uppercase sm:px-6 md:text-base'
+    >
       <p className=' text-slate-300 font-semibold space-x-4 sm:space-x-6'>
         <span>{totalQuantity} pizzas</span>
         <span>{formatCurrency(totalPrice)}</span>
