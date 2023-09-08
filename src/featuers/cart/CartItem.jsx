@@ -19,7 +19,7 @@ function CartItem({ item, isLoadingIngredients, ingredients }) {
           {isLoadingIngredients ? "Loading..." : ingredients?.join(", ")}
         </p>
       </div>
-      <div className='flex justify-between items-center sm:gap-6'>
+      <div className='flex justify-between items-center mt-2 sm:gap-6 sm:mt-0'>
         <p className='text-sm font-bold'>{formatCurrency(totalPrice)}</p>
 
         <UpdateItemQuantity

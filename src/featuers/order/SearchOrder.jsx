@@ -20,7 +20,7 @@ export default function SearchOrder() {
         placeholder='search order #'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className='input w-28 h-10 focus:ring-opacity-50 sm:w-64 sm:focus:w-72'
+        className='input w-36 h-10 focus:ring-opacity-50 sm:w-64 focus:w-72'
       />
     </form>
   );

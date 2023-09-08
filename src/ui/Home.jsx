@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div className='my-10  px-4 text-center '>
-      <h1 className='text-xl font-semibold mb-8 md:text-3xl'>
+      <h1 className='text-2xl font-semibold mb-8 md:text-3xl capitalize'>
         The best pizza.
         <br />
         <span className='text-violet-500 '>
